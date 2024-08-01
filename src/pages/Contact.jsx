@@ -2,27 +2,31 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const Contact = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [errorMsg, setErrorMsg] = useState(null)
+
+  const [errorMsg, setErrorMsg] = useState(null);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (formData.name === "" || formData.email === "" || formData.message === "" ){
-        setErrorMsg("*Please fill out the required fields")
-    }
-
-    else{
-        setErrorMsg();
-        alert("Your response have been submitted")
-        navigate("/")
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.message === ""
+    ) {
+      setErrorMsg("*Please fill out the required fields");
+    } else {
+      setErrorMsg();
+      alert("Your response have been submitted");
+      navigate("/");
     }
   };
 
@@ -33,7 +37,7 @@ const Contact = () => {
         We will get back to you soon!
       </p>
       <form action="" className="mx-auto w-1/2 mt-10">
-      <p className="text-red-500">{errorMsg}</p>
+        <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="name" className="font-semibold mb-2">
             Name: *
