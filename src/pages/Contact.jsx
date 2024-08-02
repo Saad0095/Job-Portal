@@ -13,18 +13,23 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
 
     if (
-      formData.name === "" ||
-      formData.email === "" ||
-      formData.message === ""
+      formData.name.trim() === "" ||
+      formData.email.trim() === "" ||
+      formData.message.trim() === ""
     ) {
       setErrorMsg("*Please fill out the required fields");
+    } else if (formData.name.trim().length < 4) {
+      setErrorMsg("*Name must contain atleast 4 characters");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setErrorMsg("*Invalid Email Address");
     } else {
-      setErrorMsg();
+      setErrorMsg(null);
       alert("Your response have been submitted");
       navigate("/");
     }
@@ -36,7 +41,7 @@ const Contact = () => {
       <p className="text-center text-gray-600 m-3">
         We will get back to you soon!
       </p>
-      <form action="" className="mx-auto w-1/2 mt-10">
+      <form action="" className="mx-auto w-3/4 md:w-1/2 mt-10">
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="name" className="font-semibold mb-2">
@@ -66,7 +71,7 @@ const Contact = () => {
           <label htmlFor="message" className="font-semibold mb-2">
             Message: *
           </label>
-          <input
+          <textarea
             value={formData.message}
             name="message"
             onChange={handleChange}
