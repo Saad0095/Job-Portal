@@ -2,39 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 a.active {
   color: #1e40af;
 }
-/* 
-@media screen and (max-width: 600px) {
-  .navicon {
-    display: block;
-  }
-
-  nav ul {
-    display: flex;
-    background-color: rgb(155, 249, 217);
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 70%;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  nav ul.open {
-    display: flex;
-    background-color: aquamarine;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 70%;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    padding: 20px;
-  }
-} */

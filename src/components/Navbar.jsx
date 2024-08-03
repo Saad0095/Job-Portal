@@ -15,6 +15,7 @@ const Navbar = () => {
         </div>
         <ul className="hidden sm:flex sm:space-x-12 font-semibold">
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/jobs">Jobs</NavLink> {/* New Link */}
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/login">Log In</NavLink>
         </ul>
@@ -22,9 +23,10 @@ const Navbar = () => {
 
       {isOpen ? (
         <ul className="flex flex-col sm:hidden font-semibold bg-gray-50 border-black border-b-[1px]">
-          <NavLink className="p-2" to="/" onClick={()=> setIsOpen(false)}>Home</NavLink>
-          <NavLink className="p-2" to="/contact" onClick={()=> setIsOpen(false)}>Contact</NavLink>
-          <NavLink className="p-2" to="/login" onClick={()=> setIsOpen(false)}>Log In</NavLink>
+          <NavLink className="p-2" to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+          <NavLink className="p-2" to="/jobs" onClick={() => setIsOpen(false)}>Jobs</NavLink> {/* New Link */}
+          <NavLink className="p-2" to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink className="p-2" to="/login" onClick={() => setIsOpen(false)}>Log In</NavLink>
         </ul>
       ) : null}
     </nav>
