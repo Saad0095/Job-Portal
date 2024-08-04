@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import { jobsData } from "./JobsData";
 
 const JobListing = () => {
-  
   const [searchQuery, setSearchQuery] = useState("");
-
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value.toLowerCase());
   };
-
 
   const filteredJobs = jobsData.filter((job) => {
     return (
@@ -22,13 +19,12 @@ const JobListing = () => {
 
   return (
     <div className="bg-white p-4 min-h-screen">
-      <h1 className="text-2xl font-bold mb-4 text-green-600">Job Listings</h1>
-      
+      <h1 className="text-2xl font-bold mb-4 text-green-600 text-center">Job Listings</h1>
 
-      <div className="mb-4">
+      <div className="mb-4 text-center">
         <input
           type="text"
-          placeholder="Search jobs..."
+          placeholder="Search for jobs..."
           value={searchQuery}
           onChange={handleSearchChange}
           className="border p-2 rounded w-full md:w-1/2 focus:outline-none focus:border-green-500"

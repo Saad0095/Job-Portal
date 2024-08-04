@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Contact = () => {
+const Apply = () => {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    address: "",
+    file:""
   });
 
   const [errorMsg, setErrorMsg] = useState(null);
@@ -21,7 +23,7 @@ const Contact = () => {
     if (
       formData.name.trim() === "" ||
       formData.email.trim() === "" ||
-      formData.message.trim() === ""
+      formData.address.trim() === ""
     ) {
       setErrorMsg("*Please fill out the required fields");
     } else if (formData.name.trim().length < 4) {
@@ -37,11 +39,7 @@ const Contact = () => {
 
   return (
     <div className="my-10">
-      <h1 className="text-center font-bold text-3xl m-3">Contact Us</h1>
-      <p className="text-center text-gray-600 m-3">
-        We will get back to you soon!
-      </p>
-      <form action="" className="mx-auto w-3/4 lg:w-1/2 mt-10">
+      <form action="" className="mx-auto w-3/4 lg:w-1/2 mt-10 border-2 border-gray-400 shadow-md p-10 rounded-lg">
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="name" className="font-semibold mb-2">
@@ -68,20 +66,32 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col w-full ">
-          <label htmlFor="message" className="font-semibold mb-2">
-            Message: *
+          <label htmlFor="address" className="font-semibold mb-2">
+            Address: *
           </label>
-          <textarea
-            value={formData.message}
-            name="message"
+          <input
+            value={formData.address}
+            name="address"
             onChange={handleChange}
             className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
             type="text"
           />
         </div>
+        <div className="flex flex-col w-full mt-2">
+          <label htmlFor="address" className="font-semibold mb-2">
+            Select you Resume: *
+          </label>
+          <input
+            value={formData.file}
+            name="file"
+            onChange={handleChange}
+            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            type="file"
+          />
+        </div>
         <button
           type="submit"
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-10 py-2 mx-auto my-6 rounded flex items-center justify-center"
+          className="bg-blue-700 hover:bg-blue-800 text-white font-semibold w-full mx-auto my-6 p-2 rounded flex items-center justify-center"
           onClick={handleSubmit}
         >
           Submit
@@ -91,4 +101,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Apply;
