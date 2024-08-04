@@ -40,7 +40,7 @@ const JobListing = () => {
           {filteredJobs.map((job) => (
             <div
               key={job.id}
-              className="border p-4 rounded shadow hover:shadow-lg transition duration-300"
+              className="border p-4 rounded shadow hover:shadow-lg transition duration-300 "
             >
               <h2 className="text-xl font-semibold">{job.title}</h2>
               <p className="text-gray-600">{job.company}</p>
@@ -62,3 +62,6 @@ const JobListing = () => {
 };
 
 export default JobListing;
+
+
+
