@@ -61,7 +61,7 @@ const Login = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white font-semibold px-10 py-2 mx-auto my-6 rounded flex items-center justify-center"
+          className="bg-green-600 text-white font-semibold px-10 py-2 mx-auto my-6 rounded flex items-center justify-center"
           onClick={handleSubmit}
         >
           Submit
