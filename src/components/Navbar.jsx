@@ -43,7 +43,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            {isAuthenticated ?(
+            {!isAuthenticated ?(
             <NavLink
             to="/login"
             className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
