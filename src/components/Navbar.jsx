@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white bg-opacity-70 backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
       <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
-        <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+        <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
           JobSearch
         </div>
         <div
@@ -25,9 +25,8 @@ const Navbar = () => {
             <NavLink
               to="/"
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
-              activeClassName="text-green-500 font-semibold"
             >
-              <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
+              <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                 Home
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -37,9 +36,8 @@ const Navbar = () => {
             <NavLink
               to="/contact"
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
-              activeClassName="text-green-500 font-semibold"
             >
-              <span className="inline-block transition-transform duration-300">
+              <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                 Contact
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -47,30 +45,26 @@ const Navbar = () => {
           </li>
           <li>
             {!isAuthenticated ? (
-              <button>
                 <NavLink
                   to="/login"
                   className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
-                  activeClassName="text-green-500 font-semibold"
                 >
-                  <span className="inline-block transition-transform duration-300">
+                  <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                     Log In
                   </span>
-                  <FontAwesomeIcon icon={faSignIn} className="ml-2" />
+                  <FontAwesomeIcon icon={faSignIn} className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300" />
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                 </NavLink>
-              </button>
             ) : (
               <Link
                 to=""
                 onClick={() => logout()}
                 className="relative text-gray-800 hover:text-red-600 transition-colors duration-300 ease-in-out group"
-                activeClassName="text-green-500 font-semibold"
               >
-                <span className="inline-block transition-transform duration-300">
+                <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                   Logout
                 </span>
-                <FontAwesomeIcon icon={faSignOut} className="ml-2" />
+                <FontAwesomeIcon icon={faSignOut} className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300" />
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
             )}
@@ -78,15 +72,14 @@ const Navbar = () => {
         </ul>
       </div>
       {isOpen && (
-        <ul className="flex flex-col sm:hidden font-medium bg-white bg-opacity-90 backdrop-blur-md shadow-lg border-t border-b border-gray-200">
+        <ul className="flex flex-col sm:hidden font-medium bg-white bg-opacity-90 backdrop-blur-md shadow-lg border-t border-b border-gray-200 pt-3">
           <li>
             <NavLink
               to="/"
               className="p-4 text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               onClick={() => setIsOpen(false)}
-              activeClassName="text-green-500 font-semibold"
             >
-              <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
+              <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                 Home
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -97,9 +90,8 @@ const Navbar = () => {
               to="/contact"
               className="p-4 text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               onClick={() => setIsOpen(false)}
-              activeClassName="text-green-500 font-semibold"
             >
-              <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
+              <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                 Contact
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -111,27 +103,27 @@ const Navbar = () => {
                 to="/login"
                 className="p-4 text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
                 onClick={() => setIsOpen(false)}
-                activeClassName="text-green-500 font-semibold"
               >
-                <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
+                <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
                   Log In
                 </span>
+                <FontAwesomeIcon icon={faSignIn} className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300" />
                 <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </NavLink>
             ) : (
               <Link
-                className="p-4 text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
+                className="p-4 text-gray-800 hover:text-red-500 transition-colors duration-300 ease-in-out group"
                 to="/"
                 onClick={() => {
                   setIsOpen(false);
                   logout();
                 }}
-                activeClassName="text-green-500 font-semibold"
               >
-                <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
-                  Log In
+                <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
+                  Log Out
                 </span>
-                <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                <FontAwesomeIcon icon={faSignOut} className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300" />
+                <span className="block mt-1 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
             )}
           </li>
