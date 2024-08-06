@@ -43,16 +43,32 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
+            {isAuthenticated ?(
             <NavLink
-              to="/login"
+            to="/login"
+            className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
+            activeClassName="text-green-500 font-semibold"
+          >
+            <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
+              Log In
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+          </NavLink>
+            ):(
+              <NavLink
+              to="/"
+              onClick={()=> logout()}
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               activeClassName="text-green-500 font-semibold"
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
-                Log In
+                Logout
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
+            )
+          }
+
           </li>
         </ul>
       </div>
