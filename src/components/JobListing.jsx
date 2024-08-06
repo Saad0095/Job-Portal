@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { jobsData } from "./JobsData";
+import { useNavigate } from "react-router-dom";
 
 const JobListing = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (event) => {
@@ -19,10 +21,9 @@ const JobListing = () => {
 
   return (
     <div className="bg-gray-100 p-6 min-h-screen">
-    <h1 className="text-3xl font-bold mb-6 text-green-700 text-center">
-      Job Listings
-    </h1>
-       
+      <h1 className="text-3xl font-bold mb-6 text-green-700 text-center">
+        Job Listings
+      </h1>
 
       <div className="mb-4">
         <input
@@ -39,20 +40,24 @@ const JobListing = () => {
           {filteredJobs.map((job) => (
             <div
               key={job.id}
-           className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-green-500"
+              className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-green-500"
             >
               <h2 className="text-xl font-semibold text-green-800 mb-2">
                 {job.title}
               </h2>
               <p className="text-gray-700 font-medium mb-1">{job.company}</p>
-              <p className="text-gray-600 mb-1">{job.location}</p>
-              <p className="text-gray-600 mb-1">{job.category}</p>
+
+              {/* <p className="text-gray-600 mb-1">{job.category}</p> */}
               <p className="text-gray-700 mb-2">{job.description}</p>
+              <p className="text-gray-700 mb-1">
+                <span className="font-bold">Location: </span> {job.location}
+              </p>
               <p className="font-semibold text-gray-800 mt-2">
                 Salary: {job.salary}
               </p>
-              <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200">
-                View Details
+
+              <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200" onClick={()=> navigate('/apply')}>
+                Apply Now
               </button>
             </div>
           ))}

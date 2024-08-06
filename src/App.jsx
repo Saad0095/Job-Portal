@@ -7,19 +7,21 @@ import JobListing from "./components/JobListing";
 import Apply from "./components/Apply";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/apply" element={<Apply />} />
+        <Route path="/apply" element={<PrivateRoute><Apply /></PrivateRoute>} />
       </Routes>
       <Footer />
-    </>
+    </AuthProvider>
   );
 }
 
