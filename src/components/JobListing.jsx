@@ -48,7 +48,7 @@ const JobListing = () => {
           {filteredJobs.map((job) => (
             <div
               key={job.id}
-              className="bg-green-100 border border-gray-200 rounded-lg shadow-sm p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-green-500"
+              className="bg-[#f9fff8] border border-gray-200 rounded-lg shadow-sm p-6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-green-500"
             >
               <h2 className="text-xl font-semibold text-green-800 mb-2">
                 {job.title}
