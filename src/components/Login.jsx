@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
+  const {login} = useAuth();
+  
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -27,13 +30,14 @@ const Login = () => {
       setErrorMsg(null);
       alert("Successfully Loggedin!");
       navigate("/");
+      login();
     }
   };
 
   return (
-    <div className="my-10">
-      <h1 className="text-center font-bold text-3xl m-3">Login Us</h1>
-      <form action="" className="mx-auto w-3/4 md:w-1/2 mt-10">
+    <div className="my-10 h-[70vh] flex flex-col justify-center items-center">
+      <h1 className="text-center font-bold text-3xl m-3">Login</h1>
+      <form action="" className="mx-auto w-3/4 md:w-1/3">
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="email" className="font-semibold mb-2">

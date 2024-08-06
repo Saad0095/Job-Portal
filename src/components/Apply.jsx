@@ -8,7 +8,7 @@ const Apply = () => {
     name: "",
     email: "",
     address: "",
-    file:""
+    file: "",
   });
 
   const [errorMsg, setErrorMsg] = useState(null);
@@ -39,7 +39,11 @@ const Apply = () => {
 
   return (
     <div className="my-10">
-      <form action="" className="mx-auto w-3/4 lg:w-1/2 mt-10 border-2 border-gray-400 shadow-md p-10 rounded-lg">
+      <form
+        action=""
+        className="mx-auto w-3/4 lg:w-1/2 mt-10 border-2 border-lime-200 shadow-md p-10 rounded-lg"
+      >
+        <h1 className="text-center font-bold text-3xl m-3">Apply!</h1>
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="name" className="font-semibold mb-2">
@@ -49,7 +53,7 @@ const Apply = () => {
             value={formData.name}
             name="name"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-green-400"
             type="text"
           />
         </div>
@@ -61,7 +65,7 @@ const Apply = () => {
             value={formData.email}
             name="email"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-green-400"
             type="email"
           />
         </div>
@@ -73,7 +77,7 @@ const Apply = () => {
             value={formData.address}
             name="address"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-green-400"
             type="text"
           />
         </div>
@@ -85,13 +89,13 @@ const Apply = () => {
             value={formData.file}
             name="file"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-green-400"
             type="file"
           />
         </div>
         <button
           type="submit"
-          className="bg-blue-700 hover:bg-blue-800 text-white font-semibold w-full mx-auto my-6 p-2 rounded flex items-center justify-center"
+          className="bg-green-700 hover:bg-green-800 text-white font-semibold w-full mx-auto mt-6 p-2 rounded flex items-center justify-center"
           onClick={handleSubmit}
         >
           Submit
