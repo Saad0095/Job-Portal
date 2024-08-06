@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -10,6 +10,7 @@ const Contact = () => {
   });
 
   const [errorMsg, setErrorMsg] = useState(null);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -25,63 +26,69 @@ const Contact = () => {
     ) {
       setErrorMsg("*Please fill out the required fields");
     } else if (formData.name.trim().length < 4) {
-      setErrorMsg("*Name must contain atleast 4 characters");
+      setErrorMsg("*Name must contain at least 4 characters");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       setErrorMsg("*Invalid Email Address");
     } else {
       setErrorMsg(null);
-      alert("Your response have been submitted");
+      alert("Your response has been submitted");
       navigate("/");
     }
   };
 
   return (
-    <div className="my-10">
-      <h1 className="text-center font-bold text-3xl m-3">Contact Us</h1>
-      <p className="text-center text-gray-600 m-3">
-        We will get back to you soon!
+    <div className="my-10 mx-auto max-w-4xl px-6">
+      <h1 className="text-center font-bold text-4xl text-green-700 mb-3">
+        Contact Us
+      </h1>
+      <p className="text-center text-gray-600 mb-8">
+        We'd love to hear from you. Please reach out with any questions or feedback!
       </p>
-      <form action="" className="mx-auto w-3/4 lg:w-1/2 mt-10">
-        <p className="text-red-500">{errorMsg}</p>
-        <div className="flex flex-col w-full my-4">
-          <label htmlFor="name" className="font-semibold mb-2">
-            Name: *
+      <form className="bg-white shadow-md rounded-lg p-8">
+        {errorMsg && (
+          <p className="text-red-500 text-sm mb-4">{errorMsg}</p>
+        )}
+        <div className="flex flex-col w-full mb-6">
+          <label htmlFor="name" className="font-semibold mb-2 text-gray-700">
+            Name:
           </label>
           <input
             value={formData.name}
             name="name"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded-lg p-3 text-gray-700 text-sm bg-gray-50 outline-none focus:border-green-500 transition duration-200"
             type="text"
+            placeholder="Your Name"
           />
         </div>
-        <div className="flex flex-col w-full my-4">
-          <label htmlFor="email" className="font-semibold mb-2">
-            Email: *
+        <div className="flex flex-col w-full mb-6">
+          <label htmlFor="email" className="font-semibold mb-2 text-gray-700">
+            Email:
           </label>
           <input
             value={formData.email}
             name="email"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
+            className="border border-gray-300 rounded-lg p-3 text-gray-700 text-sm bg-gray-50 outline-none focus:border-green-500 transition duration-200"
             type="email"
+            placeholder="Your Email Address"
           />
         </div>
-        <div className="flex flex-col w-full ">
-          <label htmlFor="message" className="font-semibold mb-2">
-            Message: *
+        <div className="flex flex-col w-full mb-6">
+          <label htmlFor="message" className="font-semibold mb-2 text-gray-700">
+            Message:
           </label>
           <textarea
             value={formData.message}
             name="message"
             onChange={handleChange}
-            className="border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
-            type="text"
+            className="border border-gray-300 rounded-lg p-3 text-gray-700 text-sm bg-gray-50 outline-none focus:border-green-500 transition duration-200 h-32 resize-none"
+            placeholder="Your Message"
           />
         </div>
         <button
           type="submit"
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-10 py-2 mx-auto my-6 rounded flex items-center justify-center"
+          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg w-full md:w-auto mx-auto block transition duration-200"
           onClick={handleSubmit}
         >
           Submit

@@ -36,12 +36,12 @@ const Login = () => {
 
   return (
     <div className="my-10 h-[70vh] flex flex-col justify-center items-center">
-      <h1 className="text-center font-bold text-3xl m-3">Login</h1>
+      <h1 className=" text-center text-green-700 font-bold text-3xl m-3">Login</h1>
       <form action="" className="mx-auto w-3/4 md:w-1/3">
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="email" className="font-semibold mb-2">
-            Email: *
+            Email: 
           </label>
           <input
             value={formData.email}
@@ -53,7 +53,7 @@ const Login = () => {
         </div>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="password" className="font-semibold mb-2">
-            Password: *
+            Password: 
           </label>
           <input
             value={formData.password}

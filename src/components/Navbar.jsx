@@ -39,7 +39,7 @@ const Navbar = () => {
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               activeClassName="text-green-500 font-semibold"
             >
-              <span className="inline-block transition-transform duration-300">
+              <span className="inline-block transition-transform transform group-hover:-translate-y-1 group-hover:scale-110 duration-300">
                 Contact
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
