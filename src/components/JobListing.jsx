@@ -33,7 +33,7 @@ const JobListing = () => {
             style={{ display: "inline-block" }}
           />
         </h1>
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center">
           <div className="relative w-full md:w-2/3 lg:w-1/2">
             <input
               type="text"
