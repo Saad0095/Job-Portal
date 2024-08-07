@@ -9,6 +9,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
+import ConfirmedApplication from "./components/ConfirmedApplication";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/apply" element={<PrivateRoute><Apply /></PrivateRoute>} />
+        <Route path="/apply" element={<PrivateRoute><Apply/></PrivateRoute>} />
+        <Route path="/confirmedapplication" element={<ConfirmedApplication/>} />
       </Routes>
       <Footer />
     </AuthProvider>

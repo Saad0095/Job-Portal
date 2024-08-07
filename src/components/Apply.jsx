@@ -24,7 +24,8 @@ const Apply = () => {
     if (
       formData.name.trim() === "" ||
       formData.email.trim() === "" ||
-      formData.address.trim() === ""
+      formData.address.trim() === "" ||
+      formData.file === ""
     ) {
       setErrorMsg("*Please fill out the required fields");
     } else if (formData.name.trim().length < 4) {
@@ -33,8 +34,7 @@ const Apply = () => {
       setErrorMsg("*Invalid Email Address");
     } else {
       setErrorMsg(null);
-      alert("Your response has been submitted");
-      navigate("/");
+      navigate("/confirmedapplication");
     }
   };
 
@@ -54,7 +54,7 @@ const Apply = () => {
         )}
         <div className="flex flex-col w-full mb-4">
           <label htmlFor="name" className="font-semibold mb-2 text-gray-700">
-            Name:
+            Name:*
           </label>
           <input
             value={formData.name}
@@ -67,7 +67,7 @@ const Apply = () => {
         </div>
         <div className="flex flex-col w-full mb-4">
           <label htmlFor="email" className="font-semibold mb-2 text-gray-700">
-            Email:
+            Email:*
           </label>
           <input
             value={formData.email}
@@ -80,7 +80,7 @@ const Apply = () => {
         </div>
         <div className="flex flex-col w-full mb-4">
           <label htmlFor="address" className="font-semibold mb-2 text-gray-700">
-            Address:
+            Address:*
           </label>
           <input
             value={formData.address}
@@ -93,7 +93,7 @@ const Apply = () => {
         </div>
         <div className="flex flex-col w-full mb-4">
           <label htmlFor="file" className="font-semibold mb-2 text-gray-700">
-            Select Your Resume:
+            Select Your Resume:*
           </label>
           <input
             name="file"
