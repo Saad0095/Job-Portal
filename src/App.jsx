@@ -2,14 +2,14 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
-import Login from "./components/Login";
-import JobListing from "./components/JobListing"; 
-import Apply from "./components/Apply";
+import Login from "./pages/Login";
+import Apply from "./pages/Apply";
+import ConfirmedApplication from "./pages/ConfirmedApplication";
 import "./App.css";
+import JobListing from "./components/JobListing"; 
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
-import ConfirmedApplication from "./components/ConfirmedApplication";
 
 function App() {
   return (

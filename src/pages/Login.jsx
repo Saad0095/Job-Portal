@@ -40,17 +40,17 @@ const Login = () => {
 
   return (
     <div className="my-10 h-[70vh] flex flex-col justify-center items-center">
-      <h1 className=" text-center text-green-700 font-bold text-3xl m-3">
-        Login
-      </h1>
       <form
         action=""
-        className="mx-auto w-3/4 md:w-1/3"
+        className="mx-auto w-3/4 md:w-1/2 lg:w-2/5 border-2 border-gray-300 rounded-md px-12 py-16 shadow-lg"
         onSubmit={handleSubmit}
       >
+        <h1 className=" text-center text-green-700 font-bold text-3xl m-3">
+          Login
+        </h1>
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
-          <label htmlFor="email" className="font-semibold mb-2">
+          <label htmlFor="email" className="font-semibold mb-2 ">
             Email:
           </label>
           <input
@@ -73,7 +73,10 @@ const Login = () => {
               className="w-full border border-gray-300 rounded p-2 text-sm bg-gray-50 outline-blue-500"
               type={showPassword ? "text" : "password"}
             />
-            <span onClick={() => setShowPassword(!showPassword)} className="absolute right-2 top-2 hover:cursor-pointer">
+            <span
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-2 top-2 hover:cursor-pointer"
+            >
               {showPassword ? (
                 <FontAwesomeIcon icon={faEyeSlash} />
               ) : (

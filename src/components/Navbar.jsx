@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
   return (
-    <nav className="bg-white bg-opacity-70 backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
+    <nav className="bg-white bg-opacity-80 backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
       <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
         <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
           JobSearch

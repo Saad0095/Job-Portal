@@ -2,7 +2,7 @@ import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 const ConfirmedApplication = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   return (
     <div className='h-[80vh] flex justify-center items-center flex-col'>
       <h1 className='text-4xl font-bold text-center'>Your Application Has Been Submitted!</h1>
