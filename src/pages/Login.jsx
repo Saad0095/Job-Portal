@@ -42,7 +42,7 @@ const Login = () => {
     <div className="my-10 h-[70vh] flex flex-col justify-center items-center">
       <form
         action=""
-        className="mx-auto w-3/4 md:w-1/2 lg:w-2/5 border-2 border-gray-300 rounded-md px-12 py-16 shadow-lg"
+        className="mx-auto w-3/4 md:w-1/2 lg:w-2/5 px-12 py-16 shadow-lg shadow-gray-400 rounded-lg"
         onSubmit={handleSubmit}
       >
         <h1 className=" text-center text-green-700 font-bold text-3xl m-3">

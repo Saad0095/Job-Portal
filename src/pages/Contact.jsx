@@ -38,16 +38,15 @@ const Contact = () => {
 
   return (
     <div className="my-10 mx-auto max-w-4xl px-6">
-      <h1 className="text-center font-bold text-4xl text-green-700 mb-3">
-        Contact Us
-      </h1>
-      <p className="text-center text-gray-600 mb-8">
-        We'd love to hear from you. Please reach out with any questions or feedback!
-      </p>
       <form className="bg-white shadow-md rounded-lg p-8">
-        {errorMsg && (
-          <p className="text-red-500 text-sm mb-4">{errorMsg}</p>
-        )}
+        <h1 className="text-center font-bold text-4xl text-green-700 mb-3">
+          Contact Us
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          We'd love to hear from you. Please reach out with any questions or
+          feedback!
+        </p>
+        <p className="text-red-500 text-sm mb-4">{errorMsg}</p>
         <div className="flex flex-col w-full mb-6">
           <label htmlFor="name" className="font-semibold mb-2 text-gray-700">
             Name:
