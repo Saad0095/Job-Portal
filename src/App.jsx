@@ -6,7 +6,6 @@ import Login from "./pages/Login";
 import Apply from "./pages/Apply";
 import ConfirmedApplication from "./pages/ConfirmedApplication";
 import "./App.css";
-import JobListing from "./components/JobListing"; 
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
