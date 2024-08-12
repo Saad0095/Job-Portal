@@ -38,8 +38,8 @@ const Contact = () => {
 
   return (
     <div className="my-10 mx-auto max-w-4xl px-6">
-      <form className="bg-white shadow-md rounded-lg p-8">
-        <h1 className="text-center font-bold text-4xl text-green-700 mb-3">
+      <form className="bg-white sm:shadow-md rounded-lg p-8">
+        <h1 className="text-center font-bold text-3xl md:text-4xl text-green-700 mb-3">
           Contact Us
         </h1>
         <p className="text-center text-gray-600 mb-8">

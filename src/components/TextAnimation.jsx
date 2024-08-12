@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 const TextAnimation = () => {
   return (
     <div>
-      <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-green-950 text-center">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-6 text-green-950 text-center">
         <TypeAnimation
           sequence={[
             "Find Your Dream Job!",

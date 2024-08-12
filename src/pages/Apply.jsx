@@ -41,9 +41,9 @@ const Apply = () => {
   return (
     <div className="my-10 mx-auto max-w-4xl px-6">
       <form
-        className="mx-auto w-full md:w-3/4 my-10 border-2 border-gray-200 shadow-lg p-8 rounded-lg bg-white"
+        className="mx-auto w-full md:w-3/4 my-10 md:border-2 border-gray-200 sm:shadow-lg p-8 rounded-lg bg-white"
       >
-        <h1 className="text-center font-bold text-4xl text-green-700 mb-5">
+        <h1 className="text-center font-bold text-3xl md:text-4xl text-green-700 mb-5">
           Apply Now
         </h1>
         <p className="text-center text-gray-500 mb-6">
