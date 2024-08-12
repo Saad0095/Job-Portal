@@ -76,7 +76,6 @@ export const jobsData = [
       "Innovative Apps is seeking a Mobile App Developer with experience in building Android and iOS applications. The candidate should be proficient in React Native or Flutter.",
     salary: "Rs 40,000 - Rs 70,000",
   },
-  // Additional job listings
   {
     id: 8,
     title: "Project Manager",
@@ -249,7 +248,7 @@ export const jobsData = [
     company: "Search Boosters",
     category: "Marketing",
     job_type: "Remote",
-    location: "Lahore",
+    location: "Multan",
     description:
       "Search Boosters is hiring an SEO Specialist to improve our search engine rankings. Experience with SEO tools and strategies is required.",
     salary: "Rs 35,000 - Rs 65,000",

@@ -32,6 +32,8 @@ const SearchBar = ({searchQuery,handleSearchQuery,handleLocationQuery}) => {
             <option value="Remote">Remote</option>
             <option value="Karachi">Karachi</option>
             <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Faisalabad">Faisalabad</option>
             <option value="Multan">Multan</option>
             <option value="Sharjah">Sharjah</option>
             <option value="Abu Dhabi">Abu Dhabi</option>

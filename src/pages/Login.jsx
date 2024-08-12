@@ -32,8 +32,8 @@ const Login = () => {
       setErrorMsg("*Password must contain atleast 8 characters");
     } else {
       setErrorMsg(null);
-      alert("Successfully Loggedin!");
       login();
+      alert("Successfully Loggedin!");
       navigate("/");
     }
   };
