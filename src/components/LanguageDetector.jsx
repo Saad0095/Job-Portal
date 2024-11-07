@@ -10,17 +10,25 @@ const LanguageDetectorComponent = () => {
     { code: "ur", language: "Urdu" },
   ];
 
-  const handleLangChange = (code) => {
-    i18n.changeLanguage(code);
+  const handleLangChange = () => {
+    if (i18n.language === "en") {
+      i18n.changeLanguage("ur");
+    } else {
+      i18n.changeLanguage("en");
+    }
   };
 
-  useEffect(() => {
-    document.body.dir = i18n.dir();
-  }, [i18n, i18n.language]);
+  // useEffect(() => {
+  //   document.body.dir = i18n.dir();
+  // }, [i18n, i18n.language]);
 
   return (
     <div className="flex justify-center items-center gap-5">
-      <FontAwesomeIcon className="cursor-pointer" icon={faGlobe}/>
+      <FontAwesomeIcon
+        className="cursor-pointer"
+        icon={faGlobe}
+        onClick={handleLangChange}
+      />
       {/* {languages.map((lng) => (
         <button
           className={`px-4 py-2 rounded border-2 border-gray-700 ${

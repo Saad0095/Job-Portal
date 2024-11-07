@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import LanguageDetector from "./LanguageDetector.jsx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignIn } from "@fortawesome/free-solid-svg-icons";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+  const {t} = useTranslation()
+
   return (
     <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
       <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
         <div className="flex space-x-8">
           <div
-            className="logo text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-900 via-green-700 to-green-400 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="logo text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-green-500 to-green-600 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             onClick={() => navigate("/")}
           >
-            JobSearch
+            {t("logo")}
           </div>
           <LanguageDetector/>
         </div>
