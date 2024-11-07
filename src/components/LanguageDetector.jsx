@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const LanguageDetectorComponent = () => {
   const { i18n } = useTranslation();
@@ -18,7 +20,8 @@ const LanguageDetectorComponent = () => {
 
   return (
     <div className="flex justify-center items-center gap-5">
-      {languages.map((lng) => (
+      <FontAwesomeIcon className="cursor-pointer" icon={faGlobe}/>
+      {/* {languages.map((lng) => (
         <button
           className={`px-4 py-2 rounded border-2 border-gray-700 ${
             lng.code === i18n.language ? "bg-black text-white" : ""
@@ -28,7 +31,7 @@ const LanguageDetectorComponent = () => {
         >
           {lng.language}
         </button>
-      ))}
+      ))} */}
     </div>
   );
 };
