@@ -1,3 +1,16 @@
 {
-    "logo": "جاب پورٹل"
+  "logo": "جاب پورٹل",
+  "home": "ہوم",
+  "contact": "رابطہ",
+  "login": "لاگ ان کریں",
+  "logout": "لاگ آؤٹ",
+  "searchPlaceholder": "نوکریوں کی تلاش کریں",
+  "noJobsFound": "کوئی نوکری نہیں ملی۔",
+  "text_animation": {
+    "find_your_dream_job": "اپنا خوابوں کا کام تلاش کریں!",
+    "discover_your_ideal_role": "اپنا مثالی کردار دریافت کریں!",
+    "land_the_job_you_deserve": "وہ کام حاصل کریں جس کے آپ حقدار ہیں!"
+  },
+  "apply":"ابھی اپلائی کریں",
+  "footerText": "© 2024 آپ کی کمپنی۔ جملہ حقوق محفوظ ہیں۔"
 }

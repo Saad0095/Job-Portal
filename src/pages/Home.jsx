@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import JobListings from "../components/JobListing";
-import { jobsData } from "../components/JobsData";
+import { jobsData } from "../app/JobsData";
 import TextAnimation from "../components/TextAnimation";
 
 import SearchBar from "../components/SearchBar";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+  const [jobsList, setJobsList] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
 
@@ -18,14 +21,21 @@ const Home = () => {
     setLocationQuery(event.target.value.toLowerCase());
   };
 
-  const filteredJobs = jobsData.filter((job) => {
-    return (
-      (job.title.toLowerCase().includes(searchQuery) ||
-        job.company.toLowerCase().includes(searchQuery) ||
-        job.category.toLowerCase().includes(searchQuery)) &&
-      job.location.toLowerCase().includes(locationQuery)
+  useEffect(() => {
+    console.log(jobsData);
+    setJobsList(jobsData);
+  }, []);
+
+  useEffect(() => {
+    const filteredJobs = jobsData.filter(
+      (job) =>
+        (job.title.toLowerCase().includes(searchQuery) ||
+          job.company.toLowerCase().includes(searchQuery) ||
+          job.category.toLowerCase().includes(searchQuery)) &&
+        job.location.toLowerCase().includes(locationQuery)
     );
-  });
+    setJobsList(filteredJobs);
+  }, [searchQuery, locationQuery]);
 
   return (
     <div className="bg-white p-6 min-h-screen">
@@ -37,10 +47,10 @@ const Home = () => {
           handleLocationQuery={handleLocationQuery}
         />
       </div>
-      {filteredJobs.length > 0 ? (
-        <JobListings filteredJobs={filteredJobs} />
+      {jobsList.length > 0 ? (
+        <JobListings jobsList={jobsList} />
       ) : (
-        <p className="text-red-500 mt-6 text-center">No jobs found.</p>
+        <p className="text-red-500 mt-6 text-center">{t("noJobsFound")}</p>
       )}
     </div>
   );

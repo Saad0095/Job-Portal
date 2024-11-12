@@ -1,17 +1,16 @@
-import React, { useState, useTransition } from "react";
-import LanguageDetector from "./LanguageDetector.jsx";
+import React, { useState } from "react";
+import LanguageChanger from "./LanguageChanger.jsx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignIn } from "@fortawesome/free-solid-svg-icons";
-import { faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { faSignIn, faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
@@ -23,7 +22,7 @@ const Navbar = () => {
           >
             {t("logo")}
           </div>
-          <LanguageDetector/>
+          <LanguageChanger />
         </div>
         <div
           className="sm:hidden cursor-pointer text-3xl"
@@ -38,7 +37,7 @@ const Navbar = () => {
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                Home
+                {t("home")}
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -49,7 +48,7 @@ const Navbar = () => {
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                Contact
+                {t("contact")}
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -61,7 +60,7 @@ const Navbar = () => {
                 className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  Log In
+                  {t("login")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
@@ -76,7 +75,7 @@ const Navbar = () => {
                 className="relative text-gray-800 hover:text-red-600 transition-colors duration-300 ease-in-out group"
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  Logout
+                  {t("logout")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}
@@ -97,7 +96,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                Home
+                {t("home")}
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -109,7 +108,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                Contact
+                {t("contact")}
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -122,7 +121,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  Log In
+                  {t("login")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
@@ -140,7 +139,7 @@ const Navbar = () => {
                 }}
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  Log Out
+                  {t("logout")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}

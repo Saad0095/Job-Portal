@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-const LanguageDetectorComponent = () => {
+const LanguageChanger = () => {
   const { i18n } = useTranslation();
   const languages = [
     { code: "en", language: "English" },
@@ -18,9 +18,9 @@ const LanguageDetectorComponent = () => {
     }
   };
 
-  // useEffect(() => {
-  //   document.body.dir = i18n.dir();
-  // }, [i18n, i18n.language]);
+  useEffect(() => {
+    document.body.dir = i18n.dir();
+  }, [i18n, i18n.language]);
 
   return (
     <div className="flex justify-center items-center gap-5">
@@ -44,4 +44,4 @@ const LanguageDetectorComponent = () => {
   );
 };
 
-export default LanguageDetectorComponent;
+export default LanguageChanger;

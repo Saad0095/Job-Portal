@@ -1,24 +1,25 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
-const SearchBar = ({searchQuery,handleSearchQuery,handleLocationQuery}) => {
+const SearchBar = ({ searchQuery, handleSearchQuery, handleLocationQuery }) => {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="flex justify-center items-center">
         <div className="relative w-full md:w-2/3 lg:w-1/2">
-        <FontAwesomeIcon
+          <FontAwesomeIcon
             icon={faSearch}
             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
           />
           <input
             type="text"
-            placeholder="Search for jobs..."
+            placeholder={t("searchPlaceholder")}
             value={searchQuery}
             onChange={handleSearchQuery}
             className="border rounded-r-none border-gray-300 p-3 pl-10 rounded-lg w-full h-12 focus:outline-none focus:border-green-500 shadow-md transition-all duration-300 ease-in-out"
           />
-
         </div>
         <div className="relative">
           <select
