@@ -7,6 +7,8 @@
   "searchPlaceholder": "Search for jobs...",
   "noJobsFound": "No jobs found.",
   "apply": "Apply",
+  "footerText": "© 2024 Your Company. All rights reserved.",
+
   "text_animation": {
     "find_your_dream_job": "Find Your Dream Job!",
     "discover_your_ideal_role": "Discover Your Ideal Role!",
@@ -25,5 +27,307 @@
     "sanFrancisco": "San Francisco",
     "texas": "Texas"
   },
-  "footerText": "© 2024 Your Company. All rights reserved."
+  "jobsData": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "company": "Tech Solutions",
+      "category": "Web Development",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "We are looking for a skilled Frontend Developer to join our team. The ideal candidate should have experience with React and a strong understanding of modern web development practices.",
+      "salary": "Rs 30,000 - Rs 50,000"
+    },
+    {
+      "id": 2,
+      "title": "Software Engineer",
+      "company": "Systems Limited",
+      "category": "Software",
+      "job_type": "Full-time",
+      "location": "Islamabad",
+      "description": "Join Systems Limited as a Software Engineer. You will work on cutting-edge technologies and develop software solutions that drive our business forward.",
+      "salary": "Rs 80,000 - Rs 120,000"
+    },
+    {
+      "id": 3,
+      "title": "Backend Developer",
+      "company": "Careem",
+      "category": "Web Development",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "Careem is looking for an experienced Backend Developer to design and build scalable backend systems. Proficiency in Node.js and database management is required.",
+      "salary": "Rs 50,000 - Rs 80,000"
+    },
+    {
+      "id": 4,
+      "title": "Digital Marketer",
+      "company": "Zero Marketing",
+      "category": "Marketing",
+      "job_type": "Remote",
+      "location": "Lahore",
+      "description": "Zero Marketing seeks a creative Digital Marketer to enhance our online presence. The role involves planning and executing digital marketing campaigns, and experience with SEO and social media marketing is essential.",
+      "salary": "Rs 30,000 - Rs 60,000"
+    },
+    {
+      "id": 5,
+      "title": "UI/UX Designer",
+      "company": "Creative Agency",
+      "category": "Design",
+      "job_type": "Part-time",
+      "location": "Remote",
+      "description": "We are looking for a talented UI/UX Designer to create amazing user experiences. The ideal candidate should have an eye for clean and artful design, possess superior UI/UX skills, and be able to translate high-level requirements into interaction flows and artifacts.",
+      "salary": "Rs 20,000 - Rs 40,000"
+    },
+    {
+      "id": 6,
+      "title": "DevOps Engineer",
+      "company": "Cloud Solutions",
+      "category": "IT",
+      "job_type": "Full-time",
+      "location": "Lahore",
+      "description": "Join Cloud Solutions as a DevOps Engineer. You will be responsible for managing the infrastructure, automating deployments, and ensuring high availability of applications.",
+      "salary": "Rs 70,000 - Rs 100,000"
+    },
+    {
+      "id": 7,
+      "title": "Mobile App Developer",
+      "company": "Innovative Apps",
+      "category": "Mobile Development",
+      "job_type": "Contract",
+      "location": "Remote",
+      "description": "Innovative Apps is seeking a Mobile App Developer with experience in building Android and iOS applications. The candidate should be proficient in React Native or Flutter.",
+      "salary": "Rs 40,000 - Rs 70,000"
+    },
+    {
+      "id": 8,
+      "title": "Project Manager",
+      "company": "Global Tech",
+      "category": "Management",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "Global Tech is hiring a Project Manager to oversee and coordinate projects from initiation to completion. Strong leadership skills and experience in project management are required.",
+      "salary": "Rs 90,000 - Rs 130,000"
+    },
+    {
+      "id": 9,
+      "title": "Graphic Designer",
+      "company": "Design Studio",
+      "category": "Design",
+      "job_type": "Freelance",
+      "location": "Remote",
+      "description": "Design Studio is looking for a Graphic Designer with a flair for creating visually stunning graphics. Experience with Adobe Creative Suite and a strong portfolio are essential.",
+      "salary": "Rs 25,000 - Rs 50,000"
+    },
+    {
+      "id": 10,
+      "title": "Content Writer",
+      "company": "Content Hub",
+      "category": "Writing",
+      "job_type": "Part-time",
+      "location": "Lahore",
+      "description": "Content Hub is seeking a talented Content Writer to create engaging and informative content for our website and blogs. Excellent writing skills and creativity are required.",
+      "salary": "Rs 15,000 - Rs 35,000"
+    },
+    {
+      "id": 11,
+      "title": "Data Analyst",
+      "company": "Insight Analytics",
+      "category": "Data",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "Insight Analytics is hiring a Data Analyst to analyze and interpret complex data sets. Proficiency in SQL and data visualization tools is required.",
+      "salary": "Rs 60,000 - Rs 90,000"
+    },
+    {
+      "id": 12,
+      "title": "Customer Support Specialist",
+      "company": "Support Solutions",
+      "category": "Customer Service",
+      "job_type": "Full-time",
+      "location": "Islamabad",
+      "description": "Support Solutions is looking for a Customer Support Specialist to provide excellent support to our clients. Strong communication skills and experience in customer service are essential.",
+      "salary": "Rs 25,000 - Rs 45,000"
+    },
+
+    {
+      "id": 13,
+      "title": "Web Developer",
+      "company": "Dubai Tech",
+      "category": "Web Development",
+      "job_type": "Full-time",
+      "location": "Dubai",
+      "description": "Dubai Tech is seeking a Web Developer to create and maintain web applications. Experience with JavaScript and modern frameworks is required.",
+      "salary": "AED 10,000 - AED 15,000"
+    },
+    {
+      "id": 14,
+      "title": "Software Developer",
+      "company": "Sharjah Innovations",
+      "category": "Software",
+      "job_type": "Full-time",
+      "location": "Sharjah",
+      "description": "Join Sharjah Innovations as a Software Developer. Responsibilities include developing software solutions and collaborating with cross-functional teams.",
+      "salary": "AED 8,000 - AED 12,000"
+    },
+    {
+      "id": 15,
+      "title": "IT Support Specialist",
+      "company": "Texas IT Solutions",
+      "category": "IT Support",
+      "job_type": "Full-time",
+      "location": "Texas",
+      "description": "Texas IT Solutions is looking for an IT Support Specialist to assist with technical issues and provide support to end-users.",
+      "salary": "$50,000 - $70,000"
+    },
+    {
+      "id": 16,
+      "title": "Marketing Coordinator",
+      "company": "Faisalabad Marketing",
+      "category": "Marketing",
+      "job_type": "Part-time",
+      "location": "Faisalabad",
+      "description": "Faisalabad Marketing is seeking a Marketing Coordinator to plan and execute marketing campaigns. Excellent organizational skills and experience in marketing are required.",
+      "salary": "Rs 20,000 - Rs 40,000"
+    },
+    {
+      "id": 17,
+      "title": "Sales Manager",
+      "company": "Global Sales",
+      "category": "Sales",
+      "job_type": "Full-time",
+      "location": "Dubai",
+      "description": "Global Sales is hiring a Sales Manager to lead the sales team and drive revenue growth. Strong sales experience and leadership skills are essential.",
+      "salary": "AED 12,000 - AED 18,000"
+    },
+    {
+      "id": 18,
+      "title": "AI Engineer",
+      "company": "Future AI",
+      "category": "AI",
+      "job_type": "Full-time",
+      "location": "Dubai",
+      "description": "Future AI is looking for an AI Engineer to develop and implement machine learning models. Expertise in Python and experience with AI frameworks are required.",
+      "salary": "AED 15,000 - AED 20,000"
+    },
+    {
+      "id": 19,
+      "title": "Business Analyst",
+      "company": "Tech Innovations",
+      "category": "Business Analysis",
+      "job_type": "Full-time",
+      "location": "Texas",
+      "description": "Tech Innovations seeks a Business Analyst to analyze business needs and propose technology solutions. Strong analytical skills and experience in business analysis are required.",
+      "salary": "$60,000 - $85,000"
+    },
+    {
+      "id": 20,
+      "title": "AI Research Scientist",
+      "company": "AI Labs",
+      "category": "AI",
+      "job_type": "Full-time",
+      "location": "Abu Dhabi",
+      "description": "AI Labs is hiring an AI Research Scientist to conduct research and development in artificial intelligence. A strong background in machine learning and research is essential.",
+      "salary": "AED 18,000 - AED 25,000"
+    },
+    {
+      "id": 21,
+      "title": "Cloud Engineer",
+      "company": "SkyTech",
+      "category": "IT",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "SkyTech is looking for a Cloud Engineer to manage and optimize cloud infrastructure. Experience with AWS, Azure, or Google Cloud is required.",
+      "salary": "Rs 80,000 - Rs 110,000"
+    },
+    {
+      "id": 22,
+      "title": "Network Administrator",
+      "company": "Network Solutions",
+      "category": "IT",
+      "job_type": "Full-time",
+      "location": "Islamabad",
+      "description": "Network Solutions is seeking a Network Administrator to ensure the smooth operation of network systems. Strong knowledge of network protocols and security is essential.",
+      "salary": "Rs 55,000 - Rs 85,000"
+    },
+    {
+      "id": 23,
+      "title": "SEO Specialist",
+      "company": "Search Boosters",
+      "category": "Marketing",
+      "job_type": "Remote",
+      "location": "Multan",
+      "description": "Search Boosters is hiring an SEO Specialist to improve our search engine rankings. Experience with SEO tools and strategies is required.",
+      "salary": "Rs 35,000 - Rs 65,000"
+    },
+    {
+      "id": 24,
+      "title": "Database Administrator",
+      "company": "Data Systems",
+      "category": "Data",
+      "job_type": "Full-time",
+      "location": "Karachi",
+      "description": "Data Systems is looking for a Database Administrator to manage and maintain database systems. Experience with SQL and database management is required.",
+      "salary": "Rs 70,000 - Rs 100,000"
+    },
+    {
+      "id": 25,
+      "title": "Product Designer",
+      "company": "Design Lab",
+      "category": "Design",
+      "job_type": "Part-time",
+      "location": "Remote",
+      "description": "Design Lab is seeking a Product Designer to create user-centered designs for our products. Strong design portfolio and experience with design tools are required.",
+      "salary": "Rs 25,000 - Rs 50,000"
+    },
+    {
+      "id": 26,
+      "title": "Quality Assurance Engineer",
+      "company": "Test Masters",
+      "category": "QA",
+      "job_type": "Full-time",
+      "location": "Lahore",
+      "description": "Test Masters is looking for a Quality Assurance Engineer to ensure the quality of our software products. Experience with testing tools and methodologies is required.",
+      "salary": "Rs 55,000 - Rs 85,000"
+    },
+    {
+      "id": 27,
+      "title": "Technical Writer",
+      "company": "TechDocs",
+      "category": "Writing",
+      "job_type": "Freelance",
+      "location": "Remote",
+      "description": "TechDocs is hiring a Technical Writer to create technical documentation and user guides. Strong writing skills and technical knowledge are essential.",
+      "salary": "Rs 30,000 - Rs 60,000"
+    },
+    {
+      "id": 28,
+      "title": "Social Media Manager",
+      "company": "Social Buzz",
+      "category": "Marketing",
+      "job_type": "Part-time",
+      "location": "Karachi",
+      "description": "Social Buzz is seeking a Social Media Manager to manage and grow our social media presence. Experience with social media platforms and content creation is required.",
+      "salary": "Rs 25,000 - Rs 50,000"
+    },
+    {
+      "id": 29,
+      "title": "Cybersecurity Analyst",
+      "company": "SecureNet",
+      "category": "Security",
+      "job_type": "Full-time",
+      "location": "Dubai",
+      "description": "SecureNet is looking for a Cybersecurity Analyst to protect our systems from cyber threats. Expertise in cybersecurity practices and tools is essential.",
+      "salary": "AED 12,000 - AED 18,000"
+    },
+    {
+      "id": 30,
+      "title": "Business Development Manager",
+      "company": "Growth Partners",
+      "category": "Business",
+      "job_type": "Full-time",
+      "location": "Abu Dhabi",
+      "description": "Growth Partners is hiring a Business Development Manager to identify new business opportunities and build relationships. Strong business acumen and communication skills are required.",
+      "salary": "AED 15,000 - AED 22,000"
+    }
+  ]
 }

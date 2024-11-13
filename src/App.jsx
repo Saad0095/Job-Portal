@@ -9,11 +9,12 @@ import Apply from "./pages/Apply";
 import ConfirmedApplication from "./pages/ConfirmedApplication";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
+import { Loading } from "./components/Loading";
 
 function App() {
   return (
     <AuthProvider>
-      <Suspense>
+      <Suspense fallback={<Loading/>}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
