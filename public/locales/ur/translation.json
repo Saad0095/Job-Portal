@@ -1,6 +1,6 @@
 {
   "logo": "جاب پورٹل",
-  "home": "ہوم",
+  "home": "مرکزی صفحہ",
   "contact": "رابطہ",
   "login": "لاگ ان کریں",
   "logout": "لاگ آؤٹ",
@@ -11,6 +11,19 @@
     "discover_your_ideal_role": "اپنا مثالی کردار دریافت کریں!",
     "land_the_job_you_deserve": "وہ کام حاصل کریں جس کے آپ حقدار ہیں!"
   },
-  "apply":"ابھی اپلائی کریں",
+  "apply": "ابھی اپلائی کریں",
+  "locationOptions": {
+    "all": "تمام",
+    "remote": "ریموٹ",
+    "karachi": "کراچی",
+    "lahore": "لاہور",
+    "islamabad": "اسلام آباد",
+    "faisalabad": "فیصل آباد",
+    "multan": "ملتان",
+    "sharjah": "شارجہ",
+    "abuDhabi": "ابو ظہبی",
+    "sanFrancisco": "سان فرانسسکو",
+    "texas": "ٹیکساس"
+  },
   "footerText": "© ۲۰۲۴ آپ کی کمپنی جملہ حقوق محفوظ ہیں۔"
 }

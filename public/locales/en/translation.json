@@ -6,11 +6,24 @@
   "logout": "Log Out",
   "searchPlaceholder": "Search for jobs...",
   "noJobsFound": "No jobs found.",
-  "apply":"Apply",
+  "apply": "Apply",
   "text_animation": {
     "find_your_dream_job": "Find Your Dream Job!",
     "discover_your_ideal_role": "Discover Your Ideal Role!",
     "land_the_job_you_deserve": "Land the Job You Deserve!"
+  },
+  "locationOptions": {
+    "all": "All",
+    "remote": "Remote",
+    "karachi": "Karachi",
+    "lahore": "Lahore",
+    "islamabad": "Islamabad",
+    "faisalabad": "Faisalabad",
+    "multan": "Multan",
+    "sharjah": "Sharjah",
+    "abuDhabi": "Abu Dhabi",
+    "sanFrancisco": "San Francisco",
+    "texas": "Texas"
   },
   "footerText": "© 2024 Your Company. All rights reserved."
 }
