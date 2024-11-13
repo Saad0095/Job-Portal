@@ -10,14 +10,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   return (
     <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
       <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
-        <div className="flex space-x-8">
+        <div className="flex gap-8">
           <div
-            className="logo text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-green-500 to-green-600 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+            className={`logo text-2xl sm:text-3xl font-extrabold text-green-800 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out ${
+              i18n.language === "ur" ? "text-lg sm:text-xl" : ""
+            }`}
             onClick={() => navigate("/")}
           >
             {t("logo")}
@@ -30,7 +32,7 @@ const Navbar = () => {
         >
           {isOpen ? <>&#10005;</> : <>&#9776;</>}
         </div>
-        <ul className="hidden sm:flex sm:space-x-8 lg:space-x-12 font-medium">
+        <ul className="hidden sm:flex sm:gap-8 lg:gap-12 font-medium">
           <li>
             <NavLink
               to="/"
@@ -64,7 +66,7 @@ const Navbar = () => {
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
-                  className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
+                  className="mx-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
                 />
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </NavLink>
@@ -79,7 +81,7 @@ const Navbar = () => {
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}
-                  className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
+                  className="mx-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
                 />
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
@@ -125,7 +127,7 @@ const Navbar = () => {
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
-                  className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
+                  className="mx-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
                 />
                 <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </NavLink>
@@ -143,7 +145,7 @@ const Navbar = () => {
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}
-                  className="ml-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
+                  className="mx-2 inline-block transition-transform transform group-hover:-translate-y-1 duration-300"
                 />
                 <span className="block mt-1 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>

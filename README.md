@@ -4,8 +4,9 @@ Welcome to the Job Portal! This modern application is designed to streamline the
 
 ## Technologies
 - React
-- React Router DOM
 - Tailwind CSS
+- React Router DOM
+- React i18next
 
 ## Acknowledgments
 - React and Tailwind CSS for providing powerful tools for web development.
