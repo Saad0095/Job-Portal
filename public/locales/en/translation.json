@@ -6,6 +6,8 @@
   "logout": "Log Out",
   "searchPlaceholder": "Search for jobs...",
   "noJobsFound": "No jobs found.",
+  "location": "Location",
+  "salary": "Salary",
   "apply": "Apply",
   "footerText": "© 2024 Your Company. All rights reserved.",
 

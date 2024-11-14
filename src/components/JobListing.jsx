@@ -19,10 +19,10 @@ const JobListing = ({ jobsList }) => {
           <p className="text-gray-700 font-medium mb-1">{job.company}</p>
           <p className="text-gray-700 mb-2">{job.description}</p>
           <p className="text-gray-700 mb-1">
-            <span className="font-bold">Location: </span> {job.location}
+            <span className="font-bold">{t("location")}: </span> {job.location}
           </p>
           <p className="font-semibold text-gray-800 mt-2">
-            Salary: {job.salary}
+            {t("salary")}: {job.salary}
           </p>
 
           <button

@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t } = useTranslation();
   const [jobsList, setJobsList] = useState([]);
+  const [filteredJobs, setFilteredJobs] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
 
@@ -22,20 +23,21 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log(jobsData);
+    const jobsData = t("jobsData", { returnObjects: true });
     setJobsList(jobsData);
-  }, []);
+    setFilteredJobs(jobsData); 
+  }, [t]);
 
   useEffect(() => {
-    const filteredJobs = jobsData.filter(
+    const filteredJobs = jobsList.filter(
       (job) =>
         (job.title.toLowerCase().includes(searchQuery) ||
           job.company.toLowerCase().includes(searchQuery) ||
           job.category.toLowerCase().includes(searchQuery)) &&
         job.location.toLowerCase().includes(locationQuery)
     );
-    setJobsList(filteredJobs);
-  }, [searchQuery, locationQuery]);
+    setFilteredJobs(filteredJobs); 
+  }, [searchQuery, locationQuery, jobsList]); 
 
   return (
     <div className="bg-white p-6 min-h-screen">
@@ -47,8 +49,8 @@ const Home = () => {
           handleLocationQuery={handleLocationQuery}
         />
       </div>
-      {jobsList.length > 0 ? (
-        <JobListings jobsList={jobsList} />
+      {filteredJobs.length > 0 ? (
+        <JobListings jobsList={filteredJobs} />
       ) : (
         <p className="text-red-500 mt-6 text-center">{t("noJobsFound")}</p>
       )}
