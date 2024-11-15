@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { i18n, t } = useTranslation();
   const { login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -25,33 +29,39 @@ const Login = () => {
     console.log(formData);
 
     if (formData.email.trim() === "" || formData.password.trim() === "") {
-      setErrorMsg("*Please fill out the required fields");
+      setErrorMsg(t("login.errorFillFields"));
+      toast.error(t("login.errorFillFields"));
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      setErrorMsg("*Invalid Email Address");
+      setErrorMsg(t("login.errorInvalidEmail"));
+      toast.error(t("login.errorInvalidEmail"));
     } else if (formData.password.trim().length < 8) {
-      setErrorMsg("*Password must contain atleast 8 characters");
+      setErrorMsg(t("login.errorPasswordLength"));
+      toast.error(t("login.errorPasswordLength"));
     } else {
       setErrorMsg(null);
+      toast.success(t("login.success"));
       login();
-      alert("Successfully Loggedin!");
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
   };
 
   return (
     <div className="my-10 h-[70vh] flex flex-col justify-center items-center">
+      <ToastContainer position="top-center" />
       <form
         action=""
         className="mx-auto w-full md:w-1/2 lg:w-2/5 px-12 py-16 md:shadow-lg shadow-gray-400 rounded-lg"
         onSubmit={handleSubmit}
       >
-        <h1 className=" text-center text-green-700 font-bold text-3xl m-3">
-          Login
+        <h1 className="text-center text-green-700 font-bold text-3xl m-3">
+          {t("login.title")}
         </h1>
         <p className="text-red-500">{errorMsg}</p>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="email" className="font-semibold mb-2 ">
-            Email:
+            {t("login.email")}:
           </label>
           <input
             value={formData.email}
@@ -63,7 +73,7 @@ const Login = () => {
         </div>
         <div className="flex flex-col w-full my-4">
           <label htmlFor="password" className="font-semibold mb-2">
-            Password:
+            {t("login.password")}:
           </label>
           <div className="password-field relative">
             <input
@@ -75,7 +85,9 @@ const Login = () => {
             />
             <span
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-2 top-2 hover:cursor-pointer"
+              className={`absolute hover:cursor-pointer ${
+                i18n.language === "ur" ? "top-3 left-3" : "top-2 right-2"
+              }`}
             >
               {showPassword ? (
                 <FontAwesomeIcon icon={faEyeSlash} />
@@ -86,10 +98,10 @@ const Login = () => {
           </div>
         </div>
         <button
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-10 py-2 mx-auto my-6 rounded flex items-center justify-center"
-          onClick={handleSubmit}
+          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-10 pt-3 pb-2 mx-auto my-6 rounded flex items-center justify-center"
+          type="submit"
         >
-          Login
+          {t("login.button")}
         </button>
       </form>
     </div>

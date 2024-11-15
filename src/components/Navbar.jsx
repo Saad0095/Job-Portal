@@ -39,7 +39,7 @@ const Navbar = () => {
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                {t("home")}
+                {t("navbar.home")}
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
               className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                {t("contact")}
+                {t("navbar.contact")}
               </span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 className="relative text-gray-800 hover:text-green-500 transition-colors duration-300 ease-in-out group"
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  {t("login")}
+                  {t("navbar.login")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
@@ -77,7 +77,7 @@ const Navbar = () => {
                 className="relative text-gray-800 hover:text-red-600 transition-colors duration-300 ease-in-out group"
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  {t("logout")}
+                  {t("navbar.logout")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}
@@ -98,7 +98,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                {t("home")}
+                {t("navbar.home")}
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -110,7 +110,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                {t("contact")}
+                {t("navbar.contact")}
               </span>
               <span className="block mt-1 w-full h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </NavLink>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  {t("login")}
+                  {t("navbar.login")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignIn}
@@ -141,7 +141,7 @@ const Navbar = () => {
                 }}
               >
                 <span className="inline-block transition-transform transform group-hover:-translate-y-1 duration-300">
-                  {t("logout")}
+                  {t("navbar.logout")}
                 </span>
                 <FontAwesomeIcon
                   icon={faSignOut}

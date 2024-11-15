@@ -1,9 +1,11 @@
 {
   "logo": "Job Portal",
-  "home": "Home",
-  "contact": "Contact",
-  "login": "Log In",
-  "logout": "Log Out",
+  "navbar": {
+    "home": "Home",
+    "contact": "Contact",
+    "login": "Log In",
+    "logout": "Log Out"
+  },
   "searchPlaceholder": "Search for jobs...",
   "noJobsFound": "No jobs found.",
   "location": "Location",
@@ -15,6 +17,17 @@
     "find_your_dream_job": "Find Your Dream Job!",
     "discover_your_ideal_role": "Discover Your Ideal Role!",
     "land_the_job_you_deserve": "Land the Job You Deserve!"
+  },
+
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "button": "Login",
+    "errorFillFields": "*Please fill out the required fields",
+    "errorInvalidEmail": "*Invalid Email Address",
+    "errorPasswordLength": "*Password must contain at least 8 characters",
+    "success": "Successfully Logged in!"
   },
 
   "contactpage": {
@@ -43,7 +56,7 @@
     "sanFrancisco": "San Francisco",
     "texas": "Texas"
   },
-  
+
   "jobsData": [
     {
       "id": 1,

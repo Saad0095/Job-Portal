@@ -1,9 +1,11 @@
 {
   "logo": "جاب پورٹل",
-  "home": "مرکزی صفحہ",
-  "contact": "رابطہ",
-  "login": "لاگ ان کریں",
-  "logout": "لاگ آؤٹ",
+  "navbar": {
+    "home": "مرکزی صفحہ",
+    "contact": "رابطہ",
+    "login": "لاگ ان کریں",
+    "logout": "لاگ آؤٹ"
+  },
   "searchPlaceholder": "نوکریوں کی تلاش کریں",
   "noJobsFound": "کوئی نوکری نہیں ملی۔",
   "location": "مقام",
@@ -15,6 +17,17 @@
     "discover_your_ideal_role": "اپنا مثالی کردار دریافت کریں!",
     "land_the_job_you_deserve": "وہ کام حاصل کریں جس کے آپ حقدار ہیں!"
   },
+  "login": {
+    "title": "لاگ ان",
+    "email": "ای میل",
+    "password": "پاس ورڈ",
+    "button": "لاگ ان",
+    "errorFillFields": "*براہ کرم مطلوبہ فیلڈز کو پُر کریں",
+    "errorInvalidEmail": "*غلط ای میل پتہ",
+    "errorPasswordLength": "*پاس ورڈ میں کم از کم 8 حروف ہونے چاہئیں",
+    "success": "کامیابی کے ساتھ لاگ ان ہو گیا!"
+  },
+
   "contactpage": {
     "contactUs": "ہم سے رابطہ کریں",
     "contactMessage": "ہم آپ کی رائے سن کر خوش ہوں گے۔ کسی بھی سوال یا رائے کے ساتھ براہ کرم ہم سے رابطہ کریں!",
