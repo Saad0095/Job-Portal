@@ -15,6 +15,18 @@
     "discover_your_ideal_role": "اپنا مثالی کردار دریافت کریں!",
     "land_the_job_you_deserve": "وہ کام حاصل کریں جس کے آپ حقدار ہیں!"
   },
+  "contactpage": {
+    "contactUs": "ہم سے رابطہ کریں",
+    "contactMessage": "ہم آپ کی رائے سن کر خوش ہوں گے۔ کسی بھی سوال یا رائے کے ساتھ براہ کرم ہم سے رابطہ کریں!",
+    "name": "نام",
+    "email": "ای میل",
+    "message": "پیغام",
+    "submit": "جمع کریں",
+    "errorFillFields": "*براہ کرم مطلوبہ فیلڈز کو پُر کریں",
+    "errorNameLength": "*نام میں کم از کم 4 حروف ہونے چاہئیں",
+    "errorInvalidEmail": "*غلط ای میل ایڈریس",
+    "responseSubmitted": "آپ کا جواب جمع کرادیا گیا ہے"
+  },
   "locationOptions": {
     "all": "تمام",
     "remote": "ریموٹ",

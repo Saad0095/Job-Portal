@@ -16,6 +16,20 @@
     "discover_your_ideal_role": "Discover Your Ideal Role!",
     "land_the_job_you_deserve": "Land the Job You Deserve!"
   },
+
+  "contactpage": {
+    "contactUs": "Contact Us",
+    "contactMessage": "We'd love to hear from you. Please reach out with any questions or feedback!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "errorFillFields": "*Please fill out the required fields",
+    "errorNameLength": "*Name must contain at least 4 characters",
+    "errorInvalidEmail": "*Invalid Email Address",
+    "responseSubmitted": "Your response has been submitted"
+  },
+
   "locationOptions": {
     "all": "All",
     "remote": "Remote",
@@ -29,6 +43,7 @@
     "sanFrancisco": "San Francisco",
     "texas": "Texas"
   },
+  
   "jobsData": [
     {
       "id": 1,

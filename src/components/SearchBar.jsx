@@ -20,7 +20,7 @@ const SearchBar = ({ searchQuery, handleSearchQuery, handleLocationQuery }) => {
             placeholder={t("searchPlaceholder")}
             value={searchQuery}
             onChange={handleSearchQuery}
-            className={`border rounded-lg border-gray-300 p-3  w-full h-12 focus:outline-none focus:border-green-500 shadow-md transition-all duration-300 ease-in-out ${
+            className={`border rounded-lg border-gray-300 p-3 w-full h-12 focus:outline-none focus:border-green-500 shadow-md transition-all duration-300 ease-in-out ${
               i18n.language === "ur"
                 ? "rounded-l-none pr-10"
                 : "rounded-r-none pl-10"
