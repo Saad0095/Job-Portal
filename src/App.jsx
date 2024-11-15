@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import { Suspense } from "react";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Contact from "./pages/Contact";
-import Login from "./pages/Login";
-import Apply from "./pages/Apply";
-import ConfirmedApplication from "./pages/ConfirmedApplication";
+import { lazy, Suspense } from "react";
 import { AuthProvider } from "./context/AuthContext";
-import PrivateRoute from "./routes/PrivateRoute";
-import { Loading } from "./components/Loading";
+const Home = lazy(() => import("./pages/Home"))
+const Navbar = lazy(() => import("./components/Navbar"))
+const Footer = lazy(() => import("./components/Footer"))
+const Contact = lazy(() => import("./pages/Contact"))
+const Login = lazy(() => import("./pages/Login"))
+const Apply = lazy(() => import("./pages/Apply"))
+const ConfirmedApplication = lazy(() => import("./pages/ConfirmedApplication"))
+const PrivateRoute = lazy(() => import("./routes/PrivateRoute"))
+const Loading = lazy(() => import("./components/Loading"))
 
 function App() {
   return (

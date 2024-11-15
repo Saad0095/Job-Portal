@@ -1,5 +1,7 @@
 import React from "react";
 import { SkewLoader } from "react-spinners";
-export const Loading = () => {
+
+const Loading = () => {
   return <SkewLoader />;
 };
+export default Loading;
