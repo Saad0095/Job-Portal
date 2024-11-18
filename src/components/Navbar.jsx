@@ -3,7 +3,12 @@ import LanguageChanger from "./LanguageChanger.jsx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignIn, faSignOut } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faClose,
+  faSignIn,
+  faSignOut,
+} from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
@@ -14,8 +19,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg transition-all duration-500 ease-in-out">
-      <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
-        <div className="flex gap-8">
+      <div className="flex justify-between items-center px-6 py-4 md:px-10 h-16 border-b border-gray-200">
+        <div className="flex gap-8 justify-center items-center">
           <div
             className={`logo text-2xl sm:text-3xl font-extrabold text-green-800 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out ${
               i18n.language === "ur" ? "text-lg sm:text-xl" : ""
@@ -30,7 +35,11 @@ const Navbar = () => {
           className="sm:hidden cursor-pointer text-3xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <>&#10005;</> : <>&#9776;</>}
+          {isOpen ? (
+            <FontAwesomeIcon icon={faClose} />
+          ) : (
+            <FontAwesomeIcon icon={faBars} />
+          )}
         </div>
         <ul className="hidden sm:flex sm:gap-8 lg:gap-12 font-medium">
           <li>

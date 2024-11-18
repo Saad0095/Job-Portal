@@ -41,7 +41,7 @@ const Apply = () => {
       toast.success(t("apply.success"));
       setTimeout(() => {
         navigate("/confirmedapplication");
-      }, 1500); // Delay navigation to allow toast to show
+      }, 1500);
     }
   };
 

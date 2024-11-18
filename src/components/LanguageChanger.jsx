@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const LanguageChanger = () => {
   const { i18n } = useTranslation();
-  const languages = [
-    { code: "en", language: "English" },
-    { code: "ur", language: "Urdu" },
-  ];
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef();
 
   const handleLangChange = () => {
     if (i18n.language === "en") {
@@ -16,30 +15,42 @@ const LanguageChanger = () => {
     } else {
       i18n.changeLanguage("en");
     }
+    setIsDropdownOpen(false);
   };
 
   useEffect(() => {
     document.body.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  });
+
+  const handleOutsideClick = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
   return (
-    <div className="flex justify-center items-center gap-5">
-      <FontAwesomeIcon
-        className="cursor-pointer"
-        icon={faGlobe}
-        onClick={handleLangChange}
-      />
-      {/* {languages.map((lng) => (
-        <button
-          className={`px-4 py-2 rounded border-2 border-gray-700 ${
-            lng.code === i18n.language ? "bg-black text-white" : ""
-          } `}
-          key={lng.code}
-          onClick={() => handleLangChange(lng.code)}
+    <div className="relative">
+      <div
+        className="flex gap-3 justify-center items-center font-semibold cursor-pointer"
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      >
+        <button>{i18n.language === "en" ? "English" : "اردو"}</button>
+        <FontAwesomeIcon icon={faChevronDown} />
+      </div>
+      {isDropdownOpen && (
+        <div
+          ref={dropdownRef}
+          className="absolute bg-white cursor-pointer mt-1 py-2 px-4 shadow-md min-w-full"
+          onClick={handleLangChange}
         >
-          {lng.language}
-        </button>
-      ))} */}
+          {i18n.language === "en" ? "Urdu" : "انگریزی"}
+        </div>
+      )}
     </div>
   );
 };
