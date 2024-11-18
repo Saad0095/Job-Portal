@@ -32,7 +32,7 @@ const Apply = () => {
       formData.file === ""
     ) {
       setErrorMsg(t("apply.errorFillFields"));
-    } else if (formData.name.trim().length < 4) {
+    } else if (formData.name.trim().length < 3) {
       setErrorMsg(t("apply.errorNameLength"));
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       setErrorMsg(t("apply.errorInvalidEmail"));
