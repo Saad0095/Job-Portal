@@ -10,7 +10,7 @@
   "noJobsFound": "No jobs found.",
   "location": "Location",
   "salary": "Salary",
-  "apply": "Apply",
+  "applyButton": "Apply",
   "footerText": "© 2024 Your Company. All rights reserved.",
 
   "text_animation": {
@@ -41,6 +41,29 @@
     "errorNameLength": "*Name must contain at least 4 characters",
     "errorInvalidEmail": "*Invalid Email Address",
     "responseSubmitted": "Your response has been submitted"
+  },
+
+  "apply": {
+    "title": "Apply Now",
+    "description": "Please fill out the form below to apply for a position.",
+    "name": "Name",
+    "email": "Email",
+    "address": "Address",
+    "file": "Select Your Resume",
+    "button": "Submit Application",
+    "namePlaceholder": "Your Full Name",
+    "emailPlaceholder": "Your Email Address",
+    "addressPlaceholder": "Your Current Address",
+    "errorFillFields": "*Please fill out the required fields",
+    "errorNameLength": "*Name must contain at least 4 characters",
+    "errorInvalidEmail": "*Invalid Email Address",
+    "success": "Successfully Submitted!"
+  },
+
+  "confirmedApplication": {
+    "title": "Your Application Has Been Submitted!",
+    "description": "Thank you for your application. We will review it and get back to you soon.",
+    "button": "Back to Home Page"
   },
 
   "locationOptions": {

@@ -10,7 +10,7 @@
   "noJobsFound": "کوئی نوکری نہیں ملی۔",
   "location": "مقام",
   "salary": "تنخواہ",
-  "apply": "ابھی اپلائی کریں",
+  "applyButton": "ابھی اپلائی کریں",
   "footerText": "© ۲۰۲۴ آپ کی کمپنی جملہ حقوق محفوظ ہیں۔",
   "text_animation": {
     "find_your_dream_job": "اپنے خوابوں کا کام تلاش کریں!",
@@ -40,6 +40,30 @@
     "errorInvalidEmail": "*غلط ای میل ایڈریس",
     "responseSubmitted": "آپ کا جواب جمع کرادیا گیا ہے"
   },
+
+  "apply": {
+    "title": "ابھی درخواست کریں",
+    "description": "براہ کرم کسی پوزیشن کے لیے درخواست دینے کے لیے نیچے دیئے گئے فارم کو پُر کریں۔",
+    "name": "نام",
+    "email": "ای میل",
+    "address": "پتہ",
+    "file": "اپنا ریزیومے منتخب کریں",
+    "button": "درخواست جمع کریں",
+    "namePlaceholder": "آپ کا پورا نام",
+    "emailPlaceholder": "آپ کا ای میل پتہ",
+    "addressPlaceholder": "آپ کا موجودہ پتہ",
+    "errorFillFields": "*براہ کرم مطلوبہ فیلڈز کو پُر کریں",
+    "errorNameLength": "*نام میں کم از کم 4 حروف ہونے چاہئیں",
+    "errorInvalidEmail": "*غلط ای میل ایڈریس",
+    "success": "کامیابی کے ساتھ جمع کرایا گیا!"
+  },
+  
+  "confirmedApplication": {
+    "title": "آپ کی درخواست جمع ہو گئی ہے!",
+    "description": "آپ کی درخواست کا شکریہ۔ ہم اس کا جائزہ لیں گے اور جلد ہی آپ سے رابطہ کریں گے۔",
+    "button": "مرکزی صفحہ پر واپس جائیں"
+  },
+
   "locationOptions": {
     "all": "تمام",
     "remote": "ریموٹ",

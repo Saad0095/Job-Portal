@@ -13,7 +13,7 @@ const Navbar = () => {
   const { i18n, t } = useTranslation();
 
   return (
-    <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg mb-4 transition-all duration-500 ease-in-out">
+    <nav className="bg-white backdrop-blur-xl sticky top-0 z-50 shadow-lg transition-all duration-500 ease-in-out">
       <div className="flex justify-between items-center px-6 py-4 md:px-10 min-h-16 border-b border-gray-200">
         <div className="flex gap-8">
           <div
