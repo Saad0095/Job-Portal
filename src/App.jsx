@@ -4,6 +4,7 @@ import { AuthProvider } from "./context/AuthContext";
 import Loading from "./components/Loading";
 const Home = lazy(() => import("./pages/Home"));
 const Navbar = lazy(() => import("./components/Navbar"));
+const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 const Footer = lazy(() => import("./components/Footer"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Login = lazy(() => import("./pages/Login"));
@@ -34,6 +35,7 @@ function App() {
           />
         </Routes>
       </Suspense>
+      <ScrollToTop/>
       <Footer />
     </AuthProvider>
   );

@@ -27,7 +27,7 @@ const Contact = () => {
       formData.message.trim() === ""
     ) {
       setErrorMsg(t("contactpage.errorFillFields"));
-    } else if (formData.name.trim().length < 4) {
+    } else if (formData.name.trim().length < 3) {
       setErrorMsg(t("contactpage.errorNameLength"));
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       setErrorMsg(t("contactpage.errorInvalidEmail"));
