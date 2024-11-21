@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import JobListings from "../components/JobListing";
-import { jobsData } from "../app/JobsData";
 import TextAnimation from "../components/TextAnimation";
-
 import SearchBar from "../components/SearchBar";
 import { useTranslation } from "react-i18next";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -12,7 +11,7 @@ const Home = () => {
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
-
+  const [loading, setLoading] = useState(true);
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value.toLowerCase());
   };
@@ -25,19 +24,26 @@ const Home = () => {
   useEffect(() => {
     const jobsData = t("jobsData", { returnObjects: true });
     setJobsList(jobsData);
-    setFilteredJobs(jobsData); 
+    setFilteredJobs(jobsData);
+    setLoading(false);
   }, [t]);
 
   useEffect(() => {
-    const filteredJobs = jobsList.filter(
-      (job) =>
-        (job.title.toLowerCase().includes(searchQuery) ||
-          job.company.toLowerCase().includes(searchQuery) ||
-          job.category.toLowerCase().includes(searchQuery)) &&
+    if (!loading){
+      const filteredJobs = jobsList.filter(
+        (job) =>
+          (job.title.toLowerCase().includes(searchQuery) ||
+        job.company.toLowerCase().includes(searchQuery) ||
+        job.category.toLowerCase().includes(searchQuery)) &&
         job.location.toLowerCase().includes(locationQuery)
-    );
-    setFilteredJobs(filteredJobs); 
-  }, [searchQuery, locationQuery, jobsList]); 
+      );
+      setFilteredJobs(filteredJobs);
+    }
+  }, [searchQuery, locationQuery, jobsList,loading]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="bg-white p-6 min-h-screen">
